@@ -1,0 +1,36 @@
+{% load static %}
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HB-musicplay Streaming App</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+   <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Music Streaming</h1>
+    </header>
+
+{#    <nav>#}
+{#        <ul>#}
+{##}
+{#            <li><a href="{% url 'HB_musicplay:songs' %}">Songs</a></li>#}
+{#        </ul>#}
+{#    </nav>#}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Your Music Streaming App.</p>
+    </footer>
+</body>
+</html>

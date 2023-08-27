@@ -1,0 +1,12 @@
+<!-- Display playlist's songs -->
+<h2>{{ playlist.name }}</h2>
+<ul>
+    {% for song in playlist.songs.all %}
+        <li>{{ song.title }}</li>
+    {% endfor %}
+</ul>
+<audio controls>
+    {% for song in playlist.songs.all %}
+        <source src="{{ song.audio.url }}" type="audio/mp3">
+    {% endfor %}
+</audio>

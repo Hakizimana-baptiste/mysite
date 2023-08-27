@@ -1,0 +1,10 @@
+<!-- Your create playlist form here -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>Select Songs for Playlist:</p>
+    {% for song in available_songs %}
+        <label><input type="checkbox" name="songs" value="{{ song.id }}">{{ song.title }}</label><br>
+    {% endfor %}
+    <button type="submit">Create Playlist</button>
+</form>
